@@ -26,7 +26,7 @@ var {database} = include('databaseConnection');
 const userCollection = database.db(mongodb_database).collection('users');
 
 var mongoStore = MongoStore.create({
-	mongoUrl: `mongodb+srv://${mongodb_user}:${mongodb_password}@${mongodb_host}/a-1`,
+	mongoUrl: `mongodb+srv://${mongodb_user}:${mongodb_password}@${mongodb_host}/assignment1-db`,
   crypto: {
 		secret: mongodb_session_secret
 	}
