@@ -1,0 +1,31 @@
+<%- include("templates/header") %>
+
+<h1 style="text-align: center; margin-top: 10%;" class="alert alert-primary">Welcome to my Assignment 2 app Homepage!</h1>
+
+<% if (!session.authenticated) { %>
+  <div style="text-align: center;">
+    <form action="/signUp">
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    <br>
+    <form action="/login">
+      <button type="submit" class="btn btn-primary" style="border-color: black;">Login</button>
+    </form>
+  </div>
+<% } else { %>
+  <div style="text-align: center;">
+    <form action="/members">
+      <button type="submit" class="btn btn-primary">Member's Page</button>
+    </form>
+    <br>
+    <form action="/admin">
+      <button type="submit" class="btn btn-primary">Admin's Page</button>
+    </form>
+    <br>
+    <form action="/signout">
+      <button type="submit" class="btn btn-secondary">Sign Out</button>
+    </form>
+  </div>
+<% } %>
+
+<%- include("templates/footer") %>

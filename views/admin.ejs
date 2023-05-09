@@ -1,0 +1,25 @@
+<%- include("templates/header") %> 
+<div>
+    <h1>Welcome to the admin's page!</h1>
+    <h3>Here is a list of current users</h3>
+    <ul>
+        <% let i=0; %>
+        <% for(i=0; i < users.length; i++) { %>
+        <%- include('templates/user', {user: users[i]})  %> 
+        <% } %> 
+    </ul>
+</div>
+<br>
+    <form action="/" class="text-center">
+        <button type="submit" class="btn btn-primary">Homepage</button>
+    </form>
+    <br>
+    <form action="/members" class="text-center">
+        <button type="submit" class="btn btn-primary">Member's Page</button>
+    </form>
+    <br>
+    <form action="/signout" class="text-center">
+        <button type="submit" class="btn btn-secondary">Sign out</button>
+    </form>
+</div>
+<%- include("templates/footer") %>

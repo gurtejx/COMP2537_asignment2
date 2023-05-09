@@ -1,0 +1,28 @@
+<%- include("templates/header") %>
+
+<div class="text-center mt-3">
+    <h2>Welcome, <%= name %> !<br>This is the member's page</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <img src="/public/biden.png" style="border: 1px solid black; max-width: 300px; max-height: 300px;" class="img-fluid" alt="Image 1">
+        </div>
+        <div class="col-sm">
+          <img src="/public/obama.png" style="border: 1px solid black; max-width: 300px; max-height: 300px;" class="img-fluid" alt="Image 2">
+        </div>
+        <div class="col-sm">
+          <img src="/public/trump.png" style="border: 1px solid black; max-width: 300px; max-height: 300px;" class="img-fluid" alt="Image 3">
+        </div>
+      </div>
+    </div>
+    <br>
+    <form action="/">
+      <button type="submit" class="btn btn-primary">Homepage</button>
+    </form>
+    <br>
+    <form action="/signout">
+    <button type="submit" class="btn btn-primary">Sign out</button>
+    </form>
+</div>
+
+<%- include("templates/footer") %>

@@ -1,0 +1,18 @@
+<li>
+  <div style="display: flex; align-items: center;">
+    <span><%= user.name %></span>
+    <div style="display: flex; align-items: center;">
+      <form action="/demoteUser" method="POST">
+        <button type="submit" class="btn btn-danger" style="margin-right: 5px; margin-left: 10px;">Demote</button>
+        <input type="hidden" name="email" value="<%= user.email %>">
+      </form>
+      <form action="/promoteUser" method="POST">
+        <button type="submit" class="btn btn-success" style="margin-right: 5px;">Promote</button>
+        <input type="hidden" name="email" value="<%= user.email %>">
+      </form>
+    </div>
+  </div>
+</li>
+<br>
+
+  

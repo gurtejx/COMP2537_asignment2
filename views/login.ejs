@@ -1,0 +1,36 @@
+<%- include("templates/header") %>
+
+<div class="mt-5">
+    <div class="alert alert-primary"  style="padding: 15px; width: 400px; margin: 0 auto;">
+        <h2 style=" text-align: center;">Log In</h2>
+        <form action='/loggingin' method='post' style="display: flex; flex-direction: column;">
+        <input name='email' type='text' placeholder='Email' class="p-2 mb-2">
+        <input name='password' type='password' placeholder='Password' class="p-2 mb-2">
+        <button class="btn btn-primary" style=" color: #fff; padding: 10px;">Submit</button>
+        </form>
+        
+        <!-- if errorVariable = true, display error message -->
+        <% if (req.query.blank) { %>
+            <p style="color: red;">Fields cannot be blank. Please try again.</p>
+        <% } %>
+    
+        <% if (req.query.invalid) { %>
+            <p style="color: red;">Fields cannot be blank. Please try again.</p>
+        <% } %>
+    
+        <% if (req.query.incorrect) { %>
+            <p style="color: red;">Email not in record. Sign up please.</p>
+            <button class="btn btn-primary"><a href="/signUp">Sign Up</a></button>
+        <% } %>
+    
+        <% if (req.query.incorrectPass) { %>
+            <p style="color: red;">Incorrect password. Please try again.</p>
+        <% } %>
+    
+        <% if (req.query.notLoggedIn) { %>
+            <p style="color: red;">Login to access this Page.</p>
+        <% } %>
+      </div>
+</div>
+
+<%- include("templates/footer") %>

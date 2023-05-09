@@ -1,0 +1,19 @@
+<%- include("templates/header") %>
+
+<div class="mt-5 alert alert-primary" style="padding: 15px; width: 400px; margin: 0 auto">
+    <h2 style="text-align: center;">Sign Up</h2>
+    <form action='/submitUser' method='post' style="display: flex; flex-direction: column;">
+    <input name='name' type='text' placeholder='Name' class="p-2 mb-2">
+    <input name='email' type='text' placeholder='Email' class="p-2 mb-2">
+    <input name='password' type='password' placeholder='Password' class="p-2 mb-2">
+    <button class="btn btn-primary p-2" style="color: #fff; ">Submit</button>
+    </form>
+    <% if (req.query.blank) { %>
+        <p style="color: red;">Fields cannot be blank. Please try again.</p>
+    <% } %>
+    <% if (req.query.invalid) { %>
+        <p style="color: red;">Invalid Format. Please try again.</p>
+    <% } %>
+</div>
+
+<%- include("templates/footer") %>
