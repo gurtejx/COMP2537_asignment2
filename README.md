@@ -1,1 +1,1 @@
-# COMP2537_asignment2
+# Assigment 2 for COMP 2537.
